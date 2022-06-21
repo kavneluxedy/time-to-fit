@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Time To Fit
+			{% endblock %}
+		</title>
+		<link
+		rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+		{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+	</head>
+
+	<body>
+		<div class="nav-wrapper">
+			<div class="navbar">
+				<div class="nav-logo">
+					<img src="img/logo-blanc-ttf.png" class="nav-logo" alt=""/>
+				</div>
+				<ul class="link-group">
+					<li class="link">
+						<a href="home">Accueil</a>
+					</li>
+					<li class="link">
+						<a href="training">Entrainement sportif</a>
+					</li>
+					<li class="link">
+						<a href="nutrition">Nutrition</a>
+					</li>
+					<li class="link">
+						<a href="about">À propos</a>
+					</li>
+				</ul>
+				<ul class="login-wrapper">
+					<li class="link a">
+						<a href="register">Inscription</a>
+					</li>
+					<li class="link a">
+						<a href="login">Connexion</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		{% block body %}{% endblock %}
+		<div class="footer-wrapper">
+			{% block footer %}
+				<div class="footer">
+					<div class="nav-logo-footer">
+						<img src="img/logo-blanc-ttf.png" class="nav-logo" alt=""/>
+					</div>
+
+					<div class="footer-nav-wrap">
+						<div class="footer-nav">
+							<ul class="footer-link-group">
+								<li class="accueil">
+									<a href="accueil.html">Accueil</a>
+								</li>
+								<li class="accueil">
+									<a href="programme.html">Programmes</a>
+								</li>
+								<li class="accueil">
+									<a href="nutrition.html">Nutrition</a>
+								</li>
+								<li class="accueil">
+									<a href="propos.html">À propos</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="footer-nav-wrap">
+						<div class="footer-nav">
+							<ul class="footer-link-group">
+								<li class="accueil">
+									<h4 href="#" class="footer-info">INFORMATIONS</h4>
+								</li>
+								<li class="accueil">
+									<a href="#">Conditions Générales</a>
+								</li>
+								<li class="accueil">
+									<a href="#">Politique de confidentialité</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			{% endblock %}
+		</div>
+	</body>
+</html>

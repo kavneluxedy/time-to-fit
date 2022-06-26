@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		{% for flash_error in app.flashes('verify_email_error') %}
+			<div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+		{% endfor %}
+
+		<h1>Votre profil</h1>
+
+		{{ form_start(registrationProfileForm) }}
+		{{ form_row(registrationProfileForm.gender) }}
+		{{ form_row(registrationProfileForm.date_of_birth) }}
+		{{ form_row(registrationProfileForm.height) }}
+		{{ form_row(registrationProfileForm.weight) }}
+		{{ form_row(registrationProfileForm.morphology) }}
+		{{ form_row(registrationProfileForm.daily_habit) }}
+		{{ form_row(registrationProfileForm.disponibility_hours) }}
+		{{ form_end(registrationProfileForm) }}
+	</div>
+{% endblock %}

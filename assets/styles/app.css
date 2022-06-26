@@ -6,7 +6,7 @@ body {
   font-size: 20px;
   font-family: "Nexa Light", "sans-serif";
   text-align: center;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.871);
   color: white;
 }
 
@@ -604,4 +604,9 @@ hr {
 
 .footer-info {
   margin-bottom: 28px;
+}
+
+form>div {
+  background: #f0623c;
+  color: white;
 }

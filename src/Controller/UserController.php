@@ -15,12 +15,10 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class UserController extends AbstractController
 {
-    /**
-     * @Route("/user", name="user")
-     */
+    #[Route('/user', name: 'user')]
     public function index(ManagerRegistry $doctrine): Response
     {
-        return $this->render('user/index.html.twig', []); // ! user.firstname
+        return $this->render('user/index.html.twig', []); // ! TODO : user.firstname
     }
 
     public function profile(ManagerRegistry $doctrine, $id): Response
